@@ -1,0 +1,65 @@
+{
+    "features" : [
+      {
+        "attributes" : {
+          "objectid" : 9491,
+          "idtrechovia" : 9491,
+          "idlogradouro" : 1780,
+          "idhierarquizacaoviaria" : 0,
+          "nomeusual" : "Rua Professora",
+          "classificacaoctb" : "Arruamento",
+          "st_length(shape)" : 52.632737628180664
+        },
+        "geometry" : {
+          "paths" : [
+            [
+              [
+                690249.89250000007,
+                9423416.8530000001
+              ],
+              [
+                690284.82809999958,
+                9423389.8245000001
+              ],
+              [
+                690288.12440000009,
+                9423382.0307
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "attributes" : {
+          "objectid" : 9508,
+          "idtrechovia" : 9508,
+          "idlogradouro" : 2149,
+          "nomeusual" : "Sem Denominacao",
+          "classificacaoctb" : "Arruamento",
+          "st_length(shape)" : 43.765243713650669
+        },
+        "geometry" : {
+          "paths" : [
+            [
+              [
+                687445.90589999966,
+                9423987.0072000008
+              ],
+              [
+                687433.83150000032,
+                9423995.7434999999
+              ],
+              [
+                687421.42690000031,
+                9424004.9845000003
+              ],
+              [
+                687410.93599999975,
+                9424013.3105999995
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  }

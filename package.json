@@ -1,0 +1,26 @@
+{
+  "name": "arc-to-giss",
+  "version": "1.0.0",
+  "description": "This is a very specific script that converts a \"Feature to JSON\" from Arcgis to Giss City's model.",
+  "main": "app.js",
+  "scripts": {
+    "prestart": "npm run tsc",
+    "start": "node app.js",
+    "tsc": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "config": {
+    "input": "./example.json",
+    "output": "./geoRouteSection.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^9.4.6",
+    "typescript": "2.1.4"
+  },
+  "dependencies": {
+    "jetty": "^0.2.1",
+    "jsonfile": "^4.0.0"
+  }
+}
