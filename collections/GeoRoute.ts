@@ -1,17 +1,14 @@
 import * as Jetty from 'jetty';
 
 export class GeoRoute {
-    private counter = 0;
     private data: Object;
     private features: Array<any>;
-    private featuresLength: number;
     private jetty = new Jetty(process.stdout);
     private obj: Array<Object> = [];
 
     public constructor(data: any) {
         this.data = data;
         this.features = (<any>this.data).features;
-        this.featuresLength = this.features.length;
     }
 
     public getFeatures(): Array<Object> {
@@ -19,9 +16,10 @@ export class GeoRoute {
     }
 
     public processFeaturesFromData(): void {
+        let counter = 0;
         this.jetty.clear();
         this.features.forEach(element => {
-            this.jetty.moveTo([0, 0]).text(`\nProcessing feature ${++this.counter} of ${this.featuresLength}\n`);
+            this.jetty.moveTo([0, 0]).text(`\nProcessing feature ${++counter} of ${this.features.length}\n`);
             const geoRoute = element.geometry;
             const geoProperty = element.attributes;
             // Our model reference. We're gonna use it for defining each GeoRoute instance
