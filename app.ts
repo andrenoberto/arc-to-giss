@@ -1,6 +1,6 @@
 import * as JsonFile from 'jsonfile';
 import * as Jetty from 'jetty';
-import {GeoRoute} from './GeoRoute';
+import {GeoRoute} from './collections/GeoRoute';
 
 // Let's arrange
 const argv = require('minimist')(process.argv);
@@ -12,6 +12,7 @@ let obj: any;
 //Let's start processing our data and obtain the results
 jetty.clear();
 switch (argv.algorithm) {
+    case 'interGeoRoute':
     case 'GeoRoute':
         const geoRoute = new GeoRoute(data);
         geoRoute.processFeaturesFromData();
