@@ -2,11 +2,11 @@ import * as Jetty from 'jetty';
 
 export class GeoRoute {
     private counter = 0;
-    private data: object;
+    private data: Object;
     private features: Array<any>;
     private featuresLength: number;
     private jetty = new Jetty(process.stdout);
-    private obj: Array<object> = [];
+    private obj: Array<Object> = [];
 
     public constructor(data: any) {
         this.data = data;
@@ -14,7 +14,7 @@ export class GeoRoute {
         this.featuresLength = this.features.length;
     }
 
-    public getFeatures(): Array<object> {
+    public getFeatures(): Array<Object> {
         return this.obj;
     }
 
@@ -27,8 +27,8 @@ export class GeoRoute {
             // Our model reference. We're gonna use it for defining each GeoRoute instance
             let listGeoPoint: Array<any> = [];
             let curveGeoPoint: Array<any> = [];
-            let listProperty: object;
-            let listSrcProperty: object;
+            let listProperty: Object;
+            let listSrcProperty: Object;
             let length: number;
             // Obtains coordinates from our track section.
             if (geoRoute.paths) {
