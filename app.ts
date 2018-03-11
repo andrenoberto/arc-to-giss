@@ -71,7 +71,7 @@ features.forEach(element => {
 });
 // Finally, let's save our result into a file
 jetty.text('\nWriting process started...');
-const file = process.env.npm_package_config_output || './geoRouteSection.json';
+const file = process.env.npm_package_config_output || './output_result.json';
 JsonFile.writeFile(file, obj, {spaces: 2}, (err) => {
     jetty.text(err ? err : '\nOutput file has been successfully written.');
 });
