@@ -11,7 +11,7 @@ let obj: any;
 
 //Let's start processing our data and obtain the results
 switch (argv.algorithm) {
-    case 'interGeoRoute':
+    case 'InterGeoRoute':
     case 'GeoRoute':
         const geoRoute = new GeoRoute(data);
         geoRoute.processFeaturesFromData();
