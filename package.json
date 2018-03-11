@@ -9,11 +9,6 @@
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "config": {
-    "input": "./example.json",
-    "output": "./output_file.json",
-    "algorithm": "GeoRoute"
-  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
