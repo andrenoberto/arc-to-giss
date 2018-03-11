@@ -1,4 +1,4 @@
-Arc2Giss
+Arc-To-Giss
 =====================
 This is a very specific script that converts a "Feature to JSON" from Arcgis to Giss City's model.
 
