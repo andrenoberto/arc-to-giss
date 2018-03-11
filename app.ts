@@ -58,7 +58,7 @@ features.forEach(element => {
         placeId: geoProperty.idlogradouro,
         placeName: geoProperty.nomeusual,
         placeClassification: geoProperty.classificacaoctb,
-    }
+    };
     listSrcProperty = element;
     length = geoProperty['st_length(shape)'];
     // Let's push a new section into our object
@@ -72,6 +72,6 @@ features.forEach(element => {
 // Finally, let's save our result into a file
 jetty.text('\nWriting process started...');
 const file = process.env.npm_package_config_output || './geoRouteSection.json';
-jsonfile.writeFile(file, obj, {spaces: 2}, (err, obj) => {
+jsonfile.writeFile(file, obj, {spaces: 2}, (err) => {
     jetty.text(err ? err : '\nOutput file has been successfully written.');
 });
