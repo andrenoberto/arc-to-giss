@@ -11,4 +11,4 @@ Instructions
 or you can use node directly like this:
 `node app.js --input=INPUT_FILE_ADDRESS --output=OUTPUT_FILE_ADDRESS --algorithm=GeoRoute`
 
-If you do not pass those arguments, the example ones will be used.
+All arguments are required to run.
