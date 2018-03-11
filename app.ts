@@ -10,7 +10,7 @@ const jetty = new Jetty(process.stdout);
 let obj: any;
 
 //Let's start processing our data and obtain the results
-//jetty.clear();
+jetty.clear();
 switch (argv.algorithm) {
     case 'GeoRoute':
         const geoRoute = new GeoRoute(data);
