@@ -1,4 +1,4 @@
-import * as jsonfile from 'jsonfile';
+import * as JsonFile from 'jsonfile';
 import * as Jetty from 'jetty';
 // Here we get our input json file
 const data = require(process.env.npm_package_config_input || './example.json');
@@ -72,6 +72,6 @@ features.forEach(element => {
 // Finally, let's save our result into a file
 jetty.text('\nWriting process started...');
 const file = process.env.npm_package_config_output || './geoRouteSection.json';
-jsonfile.writeFile(file, obj, {spaces: 2}, (err) => {
+JsonFile.writeFile(file, obj, {spaces: 2}, (err) => {
     jetty.text(err ? err : '\nOutput file has been successfully written.');
 });
