@@ -1,21 +1,22 @@
 import * as Jetty from 'jetty';
+import {DataHandler} from "../shared/DataHandler";
 
-export class GeoRoute {
-    private data: Object;
-    private features: Array<any>;
-    private jetty = new Jetty(process.stdout);
-    private obj: Array<Object> = [];
+export class GeoRoute implements DataHandler {
+    data: Object;
+    features: Array<any>;
+    jetty = new Jetty(process.stdout);
+    obj: Array<Object> = [];
 
-    public constructor(data: any) {
+    constructor(data: any) {
         this.data = data;
         this.features = (<any>this.data).features;
     }
 
-    public getFeatures(): Array<Object> {
+    getFeatures(): Array<Object> {
         return this.obj;
     }
 
-    public processFeaturesFromData(): void {
+    processFeaturesFromData(): void {
         let counter = 0;
         this.jetty.clear();
         this.features.forEach(element => {
