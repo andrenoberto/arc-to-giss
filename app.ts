@@ -18,7 +18,8 @@ switch (argv.algorithm) {
         obj = interGeoRoute.getFeatures();
         break;
     case 'GeoRoute':
-        const geoRoute = new GeoRoute(data);
+        let documents = require(argv.documents);
+        const geoRoute = new GeoRoute(data, documents);
         geoRoute.processFeaturesFromData();
         obj = geoRoute.getFeatures();
         break;
