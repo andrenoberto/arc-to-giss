@@ -2,6 +2,7 @@ import * as JsonFile from 'jsonfile';
 import * as Jetty from 'jetty';
 import {GeoRoute} from './collections/GeoRoute';
 import {InterGeoRoute} from "./collections/InterGeoRoute";
+import {IPoint} from "./collections/iPoint";
 
 // Let's arrange
 const argv = require('minimist')(process.argv);
@@ -16,6 +17,11 @@ switch (argv.algorithm) {
         const interGeoRoute = new InterGeoRoute(data);
         interGeoRoute.processFeaturesFromData();
         obj = interGeoRoute.getFeatures();
+        break;
+    case 'IPoint':
+        const iPoint = new IPoint(data);
+        iPoint.processFeaturesFromData();
+        obj = iPoint.getFeatures();
         break;
     case 'GeoRoute':
         let documents = require(argv.documents);

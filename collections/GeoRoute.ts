@@ -130,7 +130,6 @@ export class GeoRoute implements DataHandler {
                 return document._id;
             }
         });
-
         return '';
     }
 }
