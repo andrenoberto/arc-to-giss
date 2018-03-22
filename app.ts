@@ -24,7 +24,7 @@ switch (argv.algorithm) {
         obj = iPoint.getFeatures();
         break;
     case 'GeoRoute':
-        let documents = require(argv.documents);
+        let documents = require(argv.data);
         const geoRoute = new GeoRoute(data, documents);
         geoRoute.processFeaturesFromData();
         obj = geoRoute.getFeatures();
