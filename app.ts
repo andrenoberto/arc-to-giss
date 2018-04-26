@@ -3,6 +3,7 @@ import * as Jetty from 'jetty';
 import {GeoRoute} from './collections/GeoRoute';
 import {InterGeoRoute} from "./collections/InterGeoRoute";
 import {IPoint} from "./collections/iPoint";
+import {AbsGeoRoute} from "./collections/AbsGeoRoute";
 
 // Let's arrange
 const argv = require('minimist')(process.argv);
@@ -28,6 +29,11 @@ switch (argv.algorithm) {
         const geoRoute = new GeoRoute(data, documents);
         geoRoute.processFeaturesFromData();
         obj = geoRoute.getFeatures();
+        break;
+    case 'AbsGeoRoute':
+        const absGeoRoute = new AbsGeoRoute;
+        absGeoRoute.processFeaturesFromData();
+        obj = absGeoRoute.getFeatures();
         break;
 }
 
