@@ -1,5 +1,5 @@
 Arc-To-Giss
-=====================
+==============
 This is a very specific script that converts a "Feature to JSON" from Arcgis to Giss City's model.
 
 Instructions
@@ -22,3 +22,9 @@ Generates a list of GeoPoint. This will help us to identify relations later on.
 
 - `GeoRoute`:
 Generates a list with properties of a path that show the relation between two InterGeoRoute. It begins with a InterGeoRoute and ends with another InterGeoPoint
+
+- `IPoint`:
+Generates a list of IPoint's. Further it will help us creating ours AbsGeoRoutes. It represents an intersection in our geographical information system.
+
+- `AbsGeoRoute`:
+Generates a list of AbsGeoRoute. An AbsGeoRoute is made from two `IPoints`: `_from` & `_to`. An AbsGeoRoute is an abstract route represented by two intersection points.
